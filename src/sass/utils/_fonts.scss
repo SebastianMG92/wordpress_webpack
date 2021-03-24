@@ -1,0 +1,17 @@
+// font-family: 'Open Sans', sans-serif;
+// Light 300
+// Regular 400
+// Semi-bold 600
+// Bold 700
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+// font-family: 'Myriad Pro', sans-serif;
+// Regular 400
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/Myriad/MyriadPro-Regular.woff2') format('woff2'),
+    url('../fonts/Myriad/MyriadPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

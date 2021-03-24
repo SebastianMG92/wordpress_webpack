@@ -1,0 +1,10 @@
+@import './utils/reset';
+@import './utils/fonts';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/acc';
+
+/**
+* Importing all components
+ */
+@import './components/**/*.scss';
