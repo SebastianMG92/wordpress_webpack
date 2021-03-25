@@ -1,0 +1,115 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+  background-color: white;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: black;
+    max-width: calc(100% - 30px);
+    width: 100%;
+    margin: auto;
+  }
+  .header__logo {
+    align-self: center;
+    img {
+      display: block;
+      max-width: 150px;
+    }
+    .vertical {
+      display: none;
+    }
+  }
+  .header__menu {
+    .item {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: 1px solid black;
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .header {
+    &::after {
+      max-width: calc(540px - 30px);
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .header.vertical {
+    right: initial;
+    width: 70px;
+    bottom: 0;
+    height: 100vh;
+    padding: 15px 10px 15px 30px;
+    .container,
+    .row {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .header__logo {
+      padding: 0;
+      max-width: 100%;
+    }
+    .header__menu {
+      display: flex;
+      align-items: flex-end;
+      padding: 0;
+      max-width: 100%;
+      .item {
+        margin: auto auto 0 auto;
+      }
+    }
+    .horizontal {
+      display: none;
+    }
+    .vertical {
+      display: block;
+      max-width: 20px;
+      margin: auto;
+    }
+    &::after {
+      max-width: initial;
+      height: calc(100% - 30px);
+      left: initial;
+      bottom: 0;
+      top: 0;
+      width: 1px;
+    }
+  }
+  .header::after {
+    max-width: calc(720px - 30px);
+  }
+}
+
+@include breakpoint(lg) {
+  .header {
+    &::after {
+      max-width: calc(960px - 30px);
+    }
+  }
+}
+
+@include breakpoint(xl) {
+  .header {
+    &::after {
+      max-width: calc(1140px - 30px);
+    }
+  }
+}

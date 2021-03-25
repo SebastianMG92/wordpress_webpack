@@ -7,16 +7,16 @@
  */
 module.exports = api => {
     return {
-        plugins: [],
+        plugins: ["@babel/plugin-syntax-dynamic-import"],
         presets: [
-            [ "@babel/preset-env",
+            ["@babel/preset-env",
                 {
                     corejs: "3.1.3",
                     useBuiltIns: "entry",
                     // caller.target will be the same as the target option from webpack
-                    targets: api.caller( caller => caller && caller.target === "node" )
-                                 ? { node: "current" }
-                                 : { chrome: "58", ie: "11" }
+                    targets: api.caller(caller => caller && caller.target === "node")
+                        ? { node: "current" }
+                        : { chrome: "58", ie: "11" }
                 }
             ]
         ]

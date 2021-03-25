@@ -76,9 +76,9 @@ module.exports = (projectOptions) => {
      */
     const plugins = [
         ...Base.plugins, ...[
-            new PurgecssPlugin({ // Scans files and removes unused CSS
-                paths: glob.sync(projectOptions.projectCss.purgeCss.paths, { nodir: true }),
-            }),
+            // new PurgecssPlugin({ // Scans files and removes unused CSS
+            //     paths: glob.sync(projectOptions.projectCss.purgeCss.paths, { nodir: true }),
+            // }),
             // add plugins for production here
         ]
     ]

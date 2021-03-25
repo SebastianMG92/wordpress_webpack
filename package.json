@@ -46,23 +46,24 @@
       "./webpack/.stylelintrc.js"
     ]
   },
-  "dependencies": {
-    "eslint-config-prettier": "^8.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/eslint-parser": "^7.12.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "^7.12.11",
     "@wordpress/eslint-plugin": "^7.4.0",
     "autoprefixer": "^10.2.1",
     "babel-loader": "^8.2.2",
+    "bootstrap": "^4.6.0",
     "browser-sync": "^2.26.13",
     "browser-sync-webpack-plugin": "^2.3.0",
     "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.0.1",
     "eslint": "^7.17.0",
-    "eslint-webpack-plugin": "^2.4.1",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "eslint-webpack-plugin": "^2.4.1",
     "glob-all": "^3.2.1",
     "image-minimizer-webpack-plugin": "^2.2.0",
     "imagemin-gifsicle": "^7.0.0",

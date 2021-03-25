@@ -49,14 +49,15 @@ const projectFiles = {
     projectCss: {
         postCss: projectPaths.projectWebpack + '/postcss.config.js',
         stylelint: true, // enable or disable stylelint | this is only enabled in development env.
-        filename: 'css/[name].css',
+        filename: 'css/bundle.css',
+        chunkFilename: '[id][hash].css',
         use: 'sass', // sass || postcss
         // ^ If you want to change from Sass to PostCSS or PostCSS to Sass then you need to change the
         // styling files which are being imported in "assets/src/js/frontend.js" and "assets/src/js/backend.js".
         // So change "import '../sass/backend.scss'" to "import '../postcss/backend.pcss'" for example
         rules: {
             sass: {
-                test: /\.s[ac]ss$/i
+                test: /\.(sa|sc|c)ss$/i
             },
             postcss: {
                 test: /\.pcss$/i

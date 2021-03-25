@@ -1,7 +1,8 @@
 /**
  * SASS
  */
-import '../sass/frontend.scss';
+import '../sass/lib/bootstrap-grid.scss';
+import '../sass/main.scss';
 
 /**
  * JavaScript
