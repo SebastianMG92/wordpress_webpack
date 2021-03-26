@@ -65,7 +65,7 @@ module.exports = (projectOptions) => {
      */
     const fontsRules = {
         test: projectOptions.projectFonts.rules.test,
-        type: projectOptions.projectFonts.rules.type,
+        use: projectOptions.projectFonts.rules.use,
     }
 
     /**

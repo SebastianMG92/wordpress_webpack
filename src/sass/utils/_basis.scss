@@ -1,0 +1,143 @@
+* {
+  font-family: $sweet-sans;
+}
+
+body {
+  position: relative;
+  line-height: 1.2;
+  font-size: 16px;
+  color: $black;
+  &.horizontal {
+    overflow-x: hidden;
+  }
+}
+
+a {
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+figure {
+  margin: 0;
+}
+
+p:empty {
+  display: none;
+}
+
+.post,
+.page,
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 0;
+  overflow-x: hidden;
+}
+.content-area {
+  overflow: hidden;
+}
+.hidde-acc {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+/*************
+** Headings
+*************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $sweet-sans;
+}
+// Base
+.heading {
+  margin: 0;
+  font-weight: 700;
+}
+// Highlighted horizontal
+.heading.horizontal-big {
+  font-size: 50px;
+  line-height: 1.1;
+  margin: 0;
+  span {
+    display: block;
+  }
+  span.hightlight {
+    font-family: $austin;
+    font-weight: 300;
+    font-size: 1.5em;
+    line-height: 0.8;
+  }
+  @include breakpoint(md) {
+    font-size: 70px;
+    span.hightlight {
+      font-size: 3.0em;
+    }
+  }
+}
+
+p.text,
+.text p,
+.text {
+  font-family: $sweet-sans;
+  font-size: 14px;
+  margin: 0 0 1em;
+  font-weight: 500;
+  line-height: 1.28;
+  &:last-child {
+    margin: 0;
+  }
+  & * {
+    font-family: $sweet-sans;
+  }
+  strong,
+  b {
+    font-weight: bold;
+  }
+  a {
+    color: inherit;
+  }
+  ol,
+  ul {
+    padding-left: 20px;
+    margin: 0;
+    font-size: 16px;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+/*************
+** paddings
+*************/
+
+.custom-paddings-horizontal {
+  padding-top: var(--pt-mobile);
+  padding-bottom: var(--pb-mobile);
+  @include breakpoint(md) {
+    padding-left: var(--pt-desktop);
+    padding-right: var(--pb-desktop);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.page_template_horizontal {
+  @include breakpoint(md) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+}

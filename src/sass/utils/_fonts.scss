@@ -1,17 +1,46 @@
-// font-family: 'Open Sans', sans-serif;
-// Light 300
-// Regular 400
-// Semi-bold 600
-// Bold 700
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+// font-family: sweet-sans-pro, sans-serif;
+// Light 500
+// Regular 600
+// Medium 700
+// Bold 800
+// Heavy 900
 
-// font-family: 'Myriad Pro', sans-serif;
-// Regular 400
+@import url("https://use.typekit.net/snf1djc.css");
+
+// font-family: "Austin", sans-serif;
+
 @font-face {
-  font-family: 'Myriad Pro';
-  src: url('../fonts/Myriad/MyriadPro-Regular.woff2') format('woff2'),
-    url('../fonts/Myriad/MyriadPro-Regular.woff') format('woff');
+  font-family: "Austin";
+  src: url("../fonts/austin/Austin-Light.woff2") format("woff2"),
+    url("../fonts/austin/Austin-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Austin Roman";
+  src: url("../fonts/austin/Austin-Roman.woff2") format("woff2"),
+    url("../fonts/austin/Austin-Roman.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Austin";
+  src: url("../fonts/austin/Austin-LightItalic.woff2") format("woff2"),
+    url("../fonts/austin/Austin-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Austin Roman";
+  src: url("../fonts/austin/Austin-Italic.woff2") format("woff2"),
+    url("../fonts/austin/Austin-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
   font-display: swap;
 }

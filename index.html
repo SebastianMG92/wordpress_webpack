@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="./dist/css/bundle.css" />
   </head>
-  <body>
+  <body class="horizontal">
     <header id="header" class="header vertical">
       <div class="container">
         <div class="row">
@@ -31,7 +31,85 @@
       </div>
     </header>
 
-    <main class="page_template_gorizontal"></main>
+    <main class="page_template_horizontal js-horizontal-page">
+      <!-- 
+        Vertical block:
+        Highlighted title : .horizontal-big
+        Image full : Default
+        Text position : align-self-md-end
+      -->
+
+      <section class="imageTextHorizontal">
+        <div
+          class="imageTextHorizontal__container custom-paddings-horizontal"
+          style="
+            --pt-mobile: 100px;
+            --pb-mobile: 0px;
+            --pt-desktop: 130px;
+            --pb-desktop: 100px;
+          "
+        >
+          <div class="imageTextHorizontal__content align-self-md-end">
+            <h1 class="heading horizontal-big mb-5">
+              <span class="hightlight js-parallax-dr-left" data-depth=".1">Arts</span>
+              <span class="js-parallax-dr-left" data-depth=".15">& Culture</span>
+            </h1>
+
+            <div class="text pl-5 mb-md-5">
+              <p>
+                This world-class collection incorporates a range of mediums,
+                including sculptures, installations, and architectural designs
+                by renowned international and local visionaries. Several of our
+                artistic works are site-specific commissions created
+                exclusively.
+              </p>
+            </div>
+          </div>
+
+          <div class="imageTextHorizontal__image">
+            <figure class="imageTextHorizontal__image--item js-parallax-img">
+              <img src="./src/images/home-1.jpg" alt="" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="imageTextHorizontal">
+        <div
+          class="imageTextHorizontal__container custom-paddings-horizontal"
+          style="
+            --pt-mobile: 100px;
+            --pb-mobile: 0px;
+            --pt-desktop: 100px;
+            --pb-desktop: 100px;
+          "
+        >
+          <div class="imageTextHorizontal__content">
+            <h1 class="heading horizontal-big mb-5">
+              <span class="hightlight">Arts</span>
+              & Culture
+            </h1>
+
+            <div class="text pl-5">
+              <p>
+                This world-class collection incorporates a range of mediums,
+                including sculptures, installations, and architectural designs
+                by renowned international and local visionaries. Several of our
+                artistic works are site-specific commissions created
+                exclusively.
+              </p>
+            </div>
+          </div>
+
+          <div class="imageTextHorizontal__image">
+            <figure class="imageTextHorizontal__image--item">
+              <img src="./src/images/home-1.jpg" alt="" />
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 
   <script src="./dist/js/frontend.js"></script>

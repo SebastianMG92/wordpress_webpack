@@ -35,7 +35,7 @@ const projectFiles = {
     },
     // JS configurations for development and production
     projectJs: {
-        eslint: true, // enable or disable eslint  | this is only enabled in development env.
+        eslint: false, // enable or disable eslint  | this is only enabled in development env.
         filename: 'js/[name].js',
         entry: {
             frontend: projectPaths.projectJsPath + '/index.js',
@@ -48,7 +48,7 @@ const projectFiles = {
     // CSS configurations for development and production
     projectCss: {
         postCss: projectPaths.projectWebpack + '/postcss.config.js',
-        stylelint: true, // enable or disable stylelint | this is only enabled in development env.
+        stylelint: false, // enable or disable stylelint | this is only enabled in development env.
         filename: 'css/bundle.css',
         chunkFilename: '[id][hash].css',
         use: 'sass', // sass || postcss
@@ -110,8 +110,15 @@ const projectFiles = {
     projectFonts: {
         rules: {
             test: /\.(woff|woff2|eot|ttf|otf)$/i,
-            type: 'asset/resource',
-        }
+            use: [
+                {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                    }
+                }
+            ]
+        },
     }
 }
 
