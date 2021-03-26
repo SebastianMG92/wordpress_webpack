@@ -111,7 +111,7 @@ const HorizontalScroll = (selector) => {
 };
 
 window.addEventListener('load', e => {
-    HorizontalScroll('.js-horizontal-page');
+    // HorizontalScroll('.js-horizontal-page');
 })
 
 

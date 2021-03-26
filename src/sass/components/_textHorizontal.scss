@@ -1,0 +1,29 @@
+
+
+.textHorizontal__content {
+    padding: 0px 15px;
+}
+
+@include breakpoint(sm) {
+    .textHorizontal__content {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+}
+
+@include breakpoint(md) {
+    .textHorizontal {
+        height: 100%;
+    }
+    .textHorizontal__content {
+        max-width: 750px;
+        padding: 15px 0;
+    }
+    .textHorizontal__container  {
+        height: 100%;
+        display: flex;
+        .text * {
+            font-size: 24px;
+        }
+    }
+}

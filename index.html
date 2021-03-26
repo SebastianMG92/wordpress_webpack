@@ -33,12 +33,11 @@
 
     <main class="page_template_horizontal js-horizontal-page">
       <!-- 
-        Vertical block:
+        Vertical block text image:
         Highlighted title : .horizontal-big
         Image full : Default
         Text position : align-self-md-end
       -->
-
       <section class="imageTextHorizontal">
         <div
           class="imageTextHorizontal__container custom-paddings-horizontal"
@@ -46,7 +45,7 @@
             --pt-mobile: 100px;
             --pb-mobile: 0px;
             --pt-desktop: 130px;
-            --pb-desktop: 100px;
+            --pb-desktop: 30px;
           "
         >
           <div class="imageTextHorizontal__content align-self-md-end">
@@ -74,41 +73,76 @@
         </div>
       </section>
 
-
-      <section class="imageTextHorizontal">
+      <!-- 
+        Vertical pagination block:
+      -->
+      <section class="horizontalPagination">
         <div
-          class="imageTextHorizontal__container custom-paddings-horizontal"
+          class="horizontalPagination__container custom-paddings-horizontal"
           style="
-            --pt-mobile: 100px;
-            --pb-mobile: 0px;
-            --pt-desktop: 100px;
+            --pt-mobile: 30px;
+            --pb-mobile: 30px;
+            --pt-desktop: 0px;
+            --pb-desktop: 40px;
+          "
+        >
+        <div class="horizontalPagination__pagination">
+          <span>
+            01
+          </span>
+        </div>
+      </div>
+      </section>
+
+      <!-- 
+        Vertical block only text:
+      -->
+      <section class="textHorizontal">
+        <div
+          class="textHorizontal__container custom-paddings-horizontal"
+          style="
+            --pt-mobile: 30px;
+            --pb-mobile: 30px;
+            --pt-desktop: 10px;
             --pb-desktop: 100px;
           "
         >
-          <div class="imageTextHorizontal__content">
-            <h1 class="heading horizontal-big mb-5">
-              <span class="hightlight">Arts</span>
-              & Culture
-            </h1>
-
-            <div class="text pl-5">
+          <div class="textHorizontal__content">
+            <div class="text mb-md-5">
               <p>
-                This world-class collection incorporates a range of mediums,
-                including sculptures, installations, and architectural designs
-                by renowned international and local visionaries. Several of our
-                artistic works are site-specific commissions created
-                exclusively.
+                Carsten Höller is known for large-scale artworks that draw upon amusement parks, playgrounds and zoos. He seeks ways as an artist to transform common expectations of social spaces by altering perceptions and creating unexpected sensations - both physical and psychological. Höller applies his training as a scientist to his work as an artist, concentrating particularly on the nature of human relationships. 
+              </p>
+              <p>
+                Promoting joy — or a feeling “somewhere between delight and madness” — was Höller’s purpose when he created Aventura Slide Tower. “The emotional state created by traveling down the slide is a unique condition and was once described by the French writer Roger Caillois as “ a kind of voluptuous panic upon an otherwise lucid mind,” he says. “The slide can be experienced both by sliding down it or by viewing it from the outside with people coming down in it — which are different, but both powerful, experiences.”
               </p>
             </div>
           </div>
-
-          <div class="imageTextHorizontal__image">
-            <figure class="imageTextHorizontal__image--item">
-              <img src="./src/images/home-1.jpg" alt="" />
-            </figure>
-          </div>
         </div>
       </section>
+
+      <!-- 
+        Vertical pagination block:
+        with border: .with-border
+      -->
+      <section class="horizontalPagination">
+        <div
+          class="horizontalPagination__container custom-paddings-horizontal with-border"
+          style="
+            --pt-mobile: 30px;
+            --pb-mobile: 30px;
+            --pt-desktop: 0px;
+            --pb-desktop: 40px;
+          "
+        >
+        <div class="horizontalPagination__pagination">
+          <span>
+            02
+          </span>
+        </div>
+      </div>
+      </section>
+
+
     </main>
   </body>
 

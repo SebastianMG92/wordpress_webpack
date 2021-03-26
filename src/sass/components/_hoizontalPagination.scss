@@ -1,0 +1,43 @@
+.horizontalPagination__container {
+    &.with-border {
+        border-right: 1px solid black;
+    }
+}
+
+.horizontalPagination__pagination {
+    text-align: center;
+    span {
+        font-size: 16px;
+        line-height: 1;
+    }
+
+}
+
+@include breakpoint(sm) {
+    .horizontalPagination__content {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+}
+
+@include breakpoint(md) {
+    .horizontalPagination {
+        height: 100%;
+    }
+    .horizontalPagination__container  {
+        height: 100%;
+        display: flex;
+        .text * {
+            font-size: 24px;
+        }
+    }
+    .horizontalPagination__pagination {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        span {
+            display: block;
+            font-size: 25px;
+        }
+    }
+}
