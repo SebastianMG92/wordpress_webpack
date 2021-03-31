@@ -9,6 +9,10 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+.imageTextHorizontal__image {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 .imageTextHorizontal__image--item {
   width: 100%;
@@ -22,6 +26,10 @@
     max-width: 540px;
     margin: 0 auto 30px;
   }
+  .imageTextHorizontal__image {
+    max-width: 540px;
+    margin: 0 auto;
+  }
 }
 
 @include breakpoint(md) {
@@ -31,20 +39,31 @@
   .imageTextHorizontal__container {
     display: flex;
     height: 100%;
+    &.left {
+      flex-direction: row-reverse;
+    }
   }
   .imageTextHorizontal__content {
-    max-width: initial;
+    max-width: 350px;
     margin: 0;
     padding-top: 15px;
     padding-bottom: 15px;
-    flex-basis: 50%;
+    &.normal {
+      padding-top: 60px;
+    }
+    &.bottom {
+      padding-top: 30vh;
+    }
+    &.center {
+      align-self: center;
+    }
   }
 
   //   Full image
   .imageTextHorizontal__image {
     position: relative;
     overflow: hidden;
-    width: 100vh;
+    width: 80vh;
   }
   .imageTextHorizontal__image--item {
     position: absolute;
@@ -54,7 +73,6 @@
     width: 110%;
     height: 100%;
     overflow: hidden;
-    background-color: red;
     img {
       // position: absolute;
       // top: 0;
@@ -65,5 +83,144 @@
       height: 100%;
       object-position: center;
     }
+  }
+
+  // Normal Image 
+  .imageTextHorizontal__image.normal {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    max-width: initial;
+    padding-top: 60px;
+    .imageTextHorizontal__image--item {
+      position: static;
+      overflow: hidden;
+      margin: 0;
+      max-width: initial;
+      margin: auto;
+      width: auto;
+      height: auto;
+      img {
+        object-fit: cover;
+        height: 100%;
+        object-position: center;
+      }
+    }
+  }
+
+  // Bottom image
+  .imageTextHorizontal__image.bottom {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    max-width: initial;
+    padding-top: 30vh;
+    .imageTextHorizontal__image--item {
+      position: static;
+      overflow: hidden;
+      margin: 0;
+      max-width: initial;
+      margin: auto;
+      width: auto;
+      height: auto;
+      img {
+        object-fit: cover;
+        height: 100%;
+        object-position: center;
+      }
+    }
+  }
+
+  // Center image
+  .imageTextHorizontal__image.center {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    max-width: initial;
+    align-self: center;
+    .imageTextHorizontal__image--item {
+      position: static;
+      overflow: hidden;
+      margin: 0;
+      max-width: initial;
+      margin: auto;
+      width: auto;
+      height: auto;
+      img {
+        object-fit: cover;
+        height: 100%;
+        object-position: center;
+      }
+    }
+  }
+
+  /*******************
+  // One column layout
+  ******************/
+  .imageTextHorizontal.one-column {
+    .imageTextHorizontal__container.top {
+      flex-direction: column-reverse;
+    }
+    .imageTextHorizontal__content {
+      &.normal {
+        padding-top: 0;
+      }
+    }
+  }
+
+
+    // Normal Image 
+    .imageTextHorizontal__image.normal {
+      position: relative;
+      overflow: hidden;
+      width: auto;
+      max-width: initial;
+      padding-top: 0;
+      .imageTextHorizontal__image--item {
+        position: static;
+        overflow: hidden;
+        margin: 0;
+        max-width: initial;
+        margin: auto;
+        width: auto;
+        height: auto;
+        img {
+          object-fit: cover;
+          height: 100%;
+          object-position: center;
+        }
+      }
+    }
+
+}
+
+
+@include breakpoint(lg) {
+  .imageTextHorizontal__content {
+    &.normal {
+      padding-top: 100px;
+    }
+  }
+  // Normal Image 
+  .imageTextHorizontal__image.normal {
+    padding-top: 100px;
+    max-width: 850px;
+    margin: auto auto auto 0;
+  }
+
+
+  /*******************
+  // One column layout
+  ******************/
+  .imageTextHorizontal.one-column {
+    .imageTextHorizontal__content {
+      &.normal {
+        padding-top: 0;
+      }
+    }
+    .imageTextHorizontal__image.normal {
+      padding-top: 0;
+    }
+  
   }
 }

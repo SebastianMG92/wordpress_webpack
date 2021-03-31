@@ -1,0 +1,129 @@
+.horizontalColumns__item {
+    padding-left: 15px;
+    padding-right: 15px;
+    &:last-child {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: calc(100% - 30px);
+            height: 1px;
+            background-color: black;
+            margin: auto;
+        }
+    }
+}
+
+.horizontalColumns__item--pagination {
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    &.with-border {
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: 100%;
+            height: 1px;
+            background-color: black;
+            margin: auto;
+        }
+    }
+    span {
+        font-size: 16px;
+        line-height: 1;
+    }
+}
+
+
+.horizontalColumns__item--content {
+    padding: 30px 0;
+    .image {
+        img {
+            display: block;
+        }
+    }
+}
+
+
+@include breakpoint(sm) {
+    .horizontalColumns__item {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+}
+
+@include breakpoint(md) {
+    .horizontalColumns {
+        height: 100%;
+    }
+    .horizontalColumns__container {
+        display: flex;
+        height: 100%;
+    }
+    .horizontalColumns__item {
+        display: flex;
+        flex: 1;
+        min-width: 400px;
+        max-width: 400px;
+        padding-right: 20px;
+        padding-left: 0;
+        &:last-child {
+            position: relative;
+            &::after {
+                top: 0;
+                max-width: 1px;
+                max-height: calc(100% - 30px);
+                height: 100%;
+                left: initial;
+                right: 0;
+            }
+        }
+    }
+    .horizontalColumns__item--pagination {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        margin-right: 20px;
+        &.with-border {
+            &::after {
+                top: 0;
+                max-width: 1px;
+                max-height: calc(100% - 30px);
+                height: 100%;
+                left: initial;
+                right: 0;
+            }
+        }
+        span {
+            display: block;
+            font-size: 25px;
+        }
+    }
+    .horizontalColumns__item--content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 0;
+        .image {
+            position: relative;
+            height: 0;
+            padding-bottom: 100%;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                object-fit: cover;
+            }
+        }
+    }
+}

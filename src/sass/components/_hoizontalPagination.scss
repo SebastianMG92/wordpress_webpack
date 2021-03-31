@@ -1,6 +1,18 @@
 .horizontalPagination__container {
+    position: relative;
     &.with-border {
-        border-right: 1px solid black;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: calc(100% - 30px);
+            height: 1px;
+            background-color: black;
+            margin: auto;
+        }
     }
 }
 
@@ -14,6 +26,15 @@
 }
 
 @include breakpoint(sm) {
+
+    .horizontalPagination__container {
+        &.with-border {
+            &::after {
+                max-width: calc(540px - 30px);
+            }
+        }
+    }
+
     .horizontalPagination__content {
         max-width: 540px;
         margin: 0 auto;
@@ -27,6 +48,16 @@
     .horizontalPagination__container  {
         height: 100%;
         display: flex;
+        &.with-border {
+            &::after {
+                top: 0;
+                max-width: 1px;
+                max-height: calc(100% - 30px);
+                height: 100%;
+                left: initial;
+                right: 0;
+            }
+        }
         .text * {
             font-size: 24px;
         }
@@ -40,4 +71,5 @@
             font-size: 25px;
         }
     }
+
 }
